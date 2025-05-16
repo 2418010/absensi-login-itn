@@ -27,5 +27,25 @@
       </form>
     </div>
   </main>
+
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // cegah reload halaman
+
+      const email = form.querySelector('input[type="email"]').value;
+      const password = form.querySelector('input[type="password"]').value;
+
+      // Ganti password sesuai yang kamu inginkan
+      if(email === '2418010@itn.ac.id' && password === 'password123') {
+        alert('Login berhasil!');
+        // Contoh redirect ke halaman dashboard atau lain
+        // window.location.href = 'dashboard.html';
+      } else {
+        alert('Email atau password salah!');
+      }
+    });
+  </script>
 </body>
 </html>
+
