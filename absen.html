@@ -2,11 +2,32 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Halaman Absen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman Absensi Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Selamat datang di halaman absensi!</h1>
-  <p>Silakan klik tombol di bawah untuk absen.</p>
-  <button>Absen Sekarang</button>
+  <header>
+    <div class="navbar">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1>Halaman Absensi</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="absen-container">
+      <h2>Selamat datang!</h2>
+      <p>Silakan klik tombol di bawah untuk melakukan absensi.</p>
+      <button onclick="absen()">Absen Sekarang</button>
+      <p id="status"></p>
+    </div>
+  </main>
+
+  <script>
+    function absen() {
+      const waktu = new Date().toLocaleString("id-ID");
+      document.getElementById('status').innerText = `Anda telah absen pada ${waktu}`;
+    }
+  </script>
 </body>
 </html>
